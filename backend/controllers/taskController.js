@@ -1,4 +1,4 @@
-import fetch from "node-fetch";
+// import fetch from "node-fetch";   
 import Task from "../models/Task.js";
 
 /* -------------------------------------------------------------------------- */
@@ -6,7 +6,7 @@ import Task from "../models/Task.js";
 /* -------------------------------------------------------------------------- */
 export const extractTasks = async (req, res) => {
   try {
-    console.log("This Api end point is hitteed")
+    // console.log("This Api end point is hitteed")
     const { chatText, userEmail } = req.body;
     if (!chatText) return res.status(400).json({ error: "chatText is required" });
 
