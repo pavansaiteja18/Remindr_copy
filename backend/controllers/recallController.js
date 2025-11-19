@@ -1,5 +1,4 @@
 import dotenv from "dotenv";
-import fetch from "node-fetch";
 import Task from "../models/Task.js";
 
 dotenv.config();
