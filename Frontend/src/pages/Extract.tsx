@@ -13,7 +13,7 @@ import { toast } from "sonner";
 import { ExtractedTasksList } from "@/components/extract/ExtractedTasksList";
 import { useAuthStore } from "@/store/authStore";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_URL = "https://remindercopy-production.up.railway.app/";
 
 export default function Extract() {
   const [chatText, setChatText] = useState("");
@@ -31,7 +31,7 @@ export default function Extract() {
     try {
       setLoading(true);
 
-      const response = await fetch(`${API_URL}/api/tasks/extract-tasks`, {
+      const response = await fetch(`${API_URL}api/tasks/extract-tasks`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -94,7 +94,7 @@ export default function Extract() {
     }
 
     try {
-      const res = await fetch(`${API_URL}/api/tasks`, {
+      const res = await fetch(`${API_URL}api/tasks`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
