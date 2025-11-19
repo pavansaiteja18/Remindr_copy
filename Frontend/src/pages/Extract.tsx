@@ -39,11 +39,11 @@ export default function Extract() {
           userEmail: "nikhilsiddartha21@gmail.com",
         }),
       });
-      console.log("This is hoitted in frontend")
+      // console.log("This is hoitted in frontend")
       if (!response.ok) throw new Error("Failed to extract tasks");
 
       const data = await response.json();
-      console.log("🧾 Raw backend data:", data);
+      // console.log("🧾 Raw backend data:", data);
 
       // ✅ Fix: Parse nested JSON string if backend returns stringified JSON
       let parsedData;
@@ -55,7 +55,7 @@ export default function Extract() {
         parsedData = data;
       }
 
-      console.log("✅ Parsed data from backend:", parsedData);
+      // console.log("✅ Parsed data from backend:", parsedData);
 
       const tasksArray = Array.isArray(parsedData.tasks)
         ? parsedData.tasks

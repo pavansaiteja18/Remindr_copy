@@ -10,11 +10,11 @@ import recallRoutes from "./routes/recallRoutes.js";
 // dotenv.config();
 
 // 🔍 Debug: check if .env loaded
-if (!process.env.OPENAI_API_KEY) {
-  console.error("❌ OPENAI_API_KEY is missing! Check your .env file.");
-} else {
-  console.log("✅ OPENAI_API_KEY loaded successfully.");
-}
+// if (!process.env.OPENAI_API_KEY) {
+//   console.error("❌ OPENAI_API_KEY is missing! Check your .env file.");
+// } else {
+//   console.log("✅ OPENAI_API_KEY loaded successfully.");
+// }
 
 
 // Load environment variables
